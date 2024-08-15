@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Filmes</title>
+</head>
+<body>
+    <header>
+        <h1>Filmes</h1>
+
+        <a href="index.html"><button>HOME</button>
+        </a>
+
+        <a href="adicionar_filmes.html"><button>ADICIONAR FILME</button>
+        </a>
+    </header>
+
+    <main>
+        <form action="/editar_filme" method = "post">
+            <label for="nome_filme">Nome do filme:</label>
+            <input type="text" id="nome_filme" name="nome_filme">
+
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" name="genero">
+
+            <label for="data">data:</label>
+            <input type="text" id="data" name="data">
+
+            <a href= "/"><button>
+                Confirmar alterações</button>
+            </a>
+
+        </form>
+    </main>
+
+</body>
+</html>

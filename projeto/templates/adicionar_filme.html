@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Filmes</title>
+</head>
+<body>
+    <header>
+        <h1>Filmes</h1>
+
+        <a href="index.html"><button>HOME</button>
+        </a>
+
+        <a href="adicionar_filmes.html"><button>ADICIONAR FILME</button>
+        </a>
+    </header>
+
+    <main>
+        <div>
+            <h1>Adicionar filmes</h1><br/><br/>
+        <form action="/adicionar_filme" method = "post">
+            <label for="nome_filme">Nome do filme:</label>
+            <input type="text" id="nome_filme" name="nome_filme"><br/><br/>
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" name="genero"><br/><br/>
+            <label for="ano">Ano:</label>
+            <input type="text" id="ano" name="ano"><br/><br/>
+
+            <button type="submit">Adicionar</button>
+        </form>
+        </div>
+
+            <div>
+            <ul>
+            {% for filme in filme %} <!-- Loop através de cada contato na lista de contatos -->
+            <li>{{ filme[1] }} - {{ filme[2] }} - {{ filme[3] }} - {{ filme[4] }} - {{ filme[5] }}  <!-- Exibe as informações do contato, incluindo o nome, número de telefone e email. Se for favorito, adiciona um marcador -->
+                <ul>
+                    <li><a href="/apagar_filme/{{ loop.index0 }}">Apagar</a></li> <!-- Link para apagar o contato -->
+                </ul>
+            </li>
+            {% endfor %}
+            </ul>
+            <a href="/adicionar_filme">Adicionar</a> <!-- Link para adicionar um novo contato -->
+        </div>
+    </main>
+
+</body>
+</html>
